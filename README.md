@@ -1,31 +1,70 @@
 # Xingular Hub
 
-A curated public catalog for Xingular Agent and the standalone Xingular Harness. Browse [the catalog](CATALOG.md), inspect the files, and install an exact version from either client.
+Xingular Hub is a versioned catalog of skills, prompts, rules, plugins, agent templates, and
+connector recipes for Xingular Agent and the standalone Xingular Harness.
+
+**Browse items:** [Catalog](CATALOG.md) · **Submit an item:** [Contribution guide](CONTRIBUTING.md)
+
+## Use an item
+
+### In Xingular Agent
+
+1. Open **Capability → Hub**.
+2. Search or filter by type, then open an item to review its publisher, license, version, and source.
+3. Choose **Install**. The Hub installs the exact version shown in the item details.
+
+Agent templates and connector recipes need an extra step in the app: review a template before
+creating an agent, or open a connector recipe in the setup form. Installing either one does not
+change an existing agent or connect an account.
+
+### From the Harness terminal
+
+Use these commands if you already have the [`xingular-harness` CLI](https://github.com/tanntnny/xingular-harness#run-it-as-a-standalone-pi-terminal) installed:
 
 ```sh
+# Refresh the catalog and browse available versions
 xingular-harness hub list --refresh
+
+# Review an exact item before installing it
 xingular-harness hub show xingular/source-review@1.0.0
+
+# Install that exact version
 xingular-harness hub install xingular/source-review@1.0.0
 ```
 
-To install into the desktop application's library, use the command shown in its Hub, including its `--data` and `--state` folders. Default terminal folders form a separate library.
+Replace the example with the `publisher/name@version` shown by `hub list`. The standalone CLI
+uses its own library by default. To install into Xingular Agent's library, copy the command from
+that item's details in the app; it includes the matching `--data` and `--state` locations.
+Templates and connector recipes are saved as documents for a compatible app to review and apply.
 
-Skills, prompts, and rules install disabled. Plugins install disabled and their code remains untrusted. Templates and connector recipes are saved as documents; the application reviews and applies them separately. Installation grants no credentials, approval, or tool access.
+## What installation does
 
-The repository distributes metadata and reviewed data, with exact-version references for Pi packages. It does not host publisher accounts or execute submissions. Existing user files and settings are never published.
+| Item type | After installation |
+|---|---|
+| Skill, prompt, or rule | Added switched off. Enable it separately when you are ready to use it. |
+| Plugin | Added switched off and untrusted. Review its source, then trust and attach it separately. |
+| Agent template | Saved for review in Xingular Agent. It does not change existing agents. |
+| Connector recipe | Saved for setup in Xingular Agent. Add your own credentials and choose access explicitly. |
+
+Installation does not grant credentials, approvals, or tool access. **Official** and **Community**
+describe a listing's catalog status; neither label makes plugin code trusted. Review the source and
+license before using an item, especially one that includes code.
 
 ## Contribute
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md). Submit a pull request for a new item or a new version. Maintainers review the content, license, source, and compatibility. Official status is controlled by the catalog maintainers.
+Read the [contribution guide](CONTRIBUTING.md) for the entry format and review requirements. Each
+item has a publisher namespace and an exact version. Community submissions use the publisher's
+own namespace and the `community` channel. Published versions are immutable: create a new version
+when content changes. Maintainers review the source, license, and compatibility before merging.
 
-## Development
+To validate a checkout:
 
 ```sh
 npm ci --ignore-scripts
 npm run build
 npm run check
+npm test
 ```
 
-`catalog.json` and `CATALOG.md` are generated from `entries/`. Run `node scripts/build.mjs --sync-harness` with a sibling Harness checkout to refresh its offline snapshot. The validator reads submissions as data and never executes plugin code.
-
-New tooling, examples, and the initial Xingular-authored entries use MIT. Each entry declares its own license; adding an item does not relicense the author's work. Catalog availability is a publication step, separate from local implementation.
+The build regenerates `catalog.json` and `CATALOG.md` from `entries/`. The checks read submitted
+content as data; they do not execute plugin code.
