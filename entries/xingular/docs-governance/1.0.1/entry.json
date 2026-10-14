@@ -1,0 +1,25 @@
+{
+  "id": "xingular/docs-governance",
+  "title": "Documentation governance",
+  "description": "Set up, migrate, index, audit, or synchronize Git-native documentation for software, ML research, and agent harnesses.",
+  "publisher": "tanntnny",
+  "license": "MIT",
+  "version": "1.0.1",
+  "category": "skill",
+  "channel": "official",
+  "tags": [
+    "skill",
+    "documentation",
+    "governance"
+  ],
+  "requires": {
+    "harness": "0.1.6"
+  },
+  "sourceUrl": "https://github.com/tanntnny/xingular-hub/tree/main/entries/xingular/docs-governance/1.0.1",
+  "delivery": {
+    "kind": "registry",
+    "registryKind": "skills",
+    "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/xingular/docs-governance/1.0.1/payload.json",
+    "sha256": "8c81001f54bc70e5de288271a1c4f2e6772dfce9bb46daed6e0ecd384e7c2dfc"
+  }
+}

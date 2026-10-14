@@ -1,0 +1,25 @@
+{
+  "id": "xingular/design-decision-management",
+  "title": "Design decision management",
+  "description": "Create and maintain feature specs, significant change proposals, versioned architecture or model designs, and decision records.",
+  "publisher": "tanntnny",
+  "license": "MIT",
+  "version": "1.0.1",
+  "category": "skill",
+  "channel": "official",
+  "tags": [
+    "skill",
+    "documentation",
+    "architecture"
+  ],
+  "requires": {
+    "harness": "0.1.6"
+  },
+  "sourceUrl": "https://github.com/tanntnny/xingular-hub/tree/main/entries/xingular/design-decision-management/1.0.1",
+  "delivery": {
+    "kind": "registry",
+    "registryKind": "skills",
+    "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/xingular/design-decision-management/1.0.1/payload.json",
+    "sha256": "495bbf4f85203d50f319a99219b44bcb39ac7acc5724afa1d5dd41d7c9083bd2"
+  }
+}

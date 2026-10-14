@@ -1,0 +1,25 @@
+{
+  "id": "xingular/experiment-evaluation",
+  "title": "Experiment evaluation",
+  "description": "Plan and document repeatable software, ML, research, and agent-harness experiments and cross-run or design comparisons.",
+  "publisher": "tanntnny",
+  "license": "MIT",
+  "version": "1.0.1",
+  "category": "skill",
+  "channel": "official",
+  "tags": [
+    "skill",
+    "documentation",
+    "evaluation"
+  ],
+  "requires": {
+    "harness": "0.1.6"
+  },
+  "sourceUrl": "https://github.com/tanntnny/xingular-hub/tree/main/entries/xingular/experiment-evaluation/1.0.1",
+  "delivery": {
+    "kind": "registry",
+    "registryKind": "skills",
+    "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/xingular/experiment-evaluation/1.0.1/payload.json",
+    "sha256": "a437f8e98dbf8a59c50a60e2b20966d7b655766fcfdf1f665a7d56b7e52f82e8"
+  }
+}
