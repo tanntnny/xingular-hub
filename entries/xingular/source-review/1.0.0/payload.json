@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "name": "hub-source-review",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "encoding": "utf8",
+          "content": "---\nname: hub-source-review\ndescription: Review the evidence behind a source before using its claims.\n---\n\n# Review a source\n\nRecord its author and date. Identify the original evidence. Write what the source supports and which uncertainties remain. Cite the source so the reader can inspect it.\n"
+        }
+      ]
+    }
+  ]
+}

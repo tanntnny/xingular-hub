@@ -1,0 +1,25 @@
+{
+  "id": "github-hub",
+  "name": "GitHub",
+  "description": "Repositories, issues, and pull requests",
+  "kind": "remote",
+  "docsUrl": "https://github.com/github/github-mcp-server",
+  "url": "https://api.githubcopilot.com/mcp/",
+  "auth": "headers",
+  "oauth": null,
+  "fields": [
+    {
+      "header": "Authorization",
+      "label": "Personal access token",
+      "prefix": "Bearer ",
+      "help": "Provide a token for only the repositories and permissions you need."
+    }
+  ],
+  "setup": [
+    "Create a personal access token in GitHub with the access you want to grant.",
+    "Review the connection before enabling it."
+  ],
+  "notice": null,
+  "provenance": null,
+  "suggestedReadTools": []
+}

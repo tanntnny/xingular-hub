@@ -1,0 +1,22 @@
+{
+  "id": "xingular/research-starter",
+  "title": "Research starter",
+  "description": "A starting agent for comparing sources and writing supported answers.",
+  "publisher": "Xingular",
+  "license": "MIT",
+  "version": "1.0.0",
+  "category": "agent-template",
+  "channel": "official",
+  "tags": [
+    "agent-template"
+  ],
+  "requires": {
+    "harness": "0.1.6"
+  },
+  "sourceUrl": "https://github.com/tanntnny/xingular-hub/tree/main/entries/xingular/research-starter/1.0.0",
+  "delivery": {
+    "kind": "document",
+    "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/xingular/research-starter/1.0.0/payload.json",
+    "sha256": "a2f672583df6f4049cc153ba1e173192301220e5f8817f9ad5a4fe87af25f52b"
+  }
+}

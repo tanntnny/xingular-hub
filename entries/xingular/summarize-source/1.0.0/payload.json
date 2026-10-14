@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "name": "hub-summarize-source",
+      "files": [
+        {
+          "path": "CONTENT.md",
+          "encoding": "utf8",
+          "content": "---\nname: summarize-source\ndescription: Summarize the supplied source and its limits.\n---\n\nSummarize the source below. Include its main claims, supporting evidence, limitations, and questions it leaves unanswered.\n\n$@\n"
+        }
+      ]
+    }
+  ]
+}

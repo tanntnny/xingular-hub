@@ -1,0 +1,463 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "number",
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]{1,64}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "license": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "agent": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "icon": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "mascot"
+            },
+            "shape": {
+              "type": "string",
+              "enum": [
+                "orb",
+                "pebble",
+                "cube",
+                "prism",
+                "ring",
+                "cloud",
+                "bot",
+                "ghost",
+                "cat",
+                "sprout",
+                "star",
+                "droplet"
+              ]
+            },
+            "color": {
+              "type": "string",
+              "enum": [
+                "neutral",
+                "blue",
+                "green",
+                "amber",
+                "rose",
+                "violet",
+                "cyan",
+                "orange"
+              ]
+            },
+            "material": {
+              "type": "string",
+              "enum": [
+                "smooth",
+                "paper",
+                "glass",
+                "metal",
+                "clay",
+                "felt",
+                "wood",
+                "chrome",
+                "neon"
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "shape",
+            "color",
+            "material"
+          ],
+          "additionalProperties": false
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "instructions": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 20000
+        },
+        "model": {
+          "default": null,
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 160
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "effort": {
+          "default": null,
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "off",
+                "minimal",
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "tools": {
+          "maxItems": 100,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "read",
+              "grep",
+              "find",
+              "ls",
+              "edit",
+              "write",
+              "bash",
+              "browser_navigate",
+              "browser_read",
+              "browser_click",
+              "browser_type",
+              "browser_scroll",
+              "browser_tabs",
+              "browser_upload",
+              "computer_apps",
+              "computer_screenshot",
+              "computer_click",
+              "computer_type",
+              "computer_key",
+              "list_agents",
+              "message_agent",
+              "create_agent",
+              "update_agent",
+              "list_projects",
+              "delegate_task",
+              "collect_tasks",
+              "stop_task",
+              "list_tasks",
+              "web_search",
+              "web_fetch",
+              "list_panes",
+              "create_pane",
+              "message_pane",
+              "read_pane",
+              "dispatch_work",
+              "direct_work",
+              "list_work",
+              "review_work",
+              "resolve_worker_approval",
+              "answer_worker_question",
+              "draft_automation"
+            ]
+          }
+        }
+      },
+      "required": [
+        "name",
+        "icon",
+        "description",
+        "instructions",
+        "model",
+        "effort",
+        "tools"
+      ],
+      "additionalProperties": false
+    },
+    "skills": {
+      "default": [],
+      "maxItems": 20,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          },
+          "files": {
+            "minItems": 1,
+            "maxItems": 100,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 240
+                },
+                "encoding": {
+                  "type": "string",
+                  "enum": [
+                    "utf8",
+                    "base64"
+                  ]
+                },
+                "content": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path",
+                "encoding",
+                "content"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "name",
+          "files"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "connections": {
+      "default": [],
+      "maxItems": 10,
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]{1,64}$"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "setup": {
+                "default": [],
+                "maxItems": 20,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 500
+                }
+              },
+              "kind": {
+                "type": "string",
+                "const": "remote"
+              },
+              "url": {
+                "type": "string",
+                "format": "starts_with",
+                "pattern": "^https:\\/\\/.*"
+              },
+              "auth": {
+                "default": "none",
+                "type": "string",
+                "enum": [
+                  "none",
+                  "headers",
+                  "oauth"
+                ]
+              },
+              "oauthClient": {
+                "default": null,
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "dynamic",
+                      "user"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "oauthScopes": {
+                "default": [],
+                "maxItems": 20,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 240
+                }
+              },
+              "fields": {
+                "default": [],
+                "maxItems": 12,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "header": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9-]+$"
+                    },
+                    "label": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 100
+                    },
+                    "prefix": {
+                      "default": "",
+                      "type": "string",
+                      "maxLength": 40
+                    },
+                    "help": {
+                      "default": "",
+                      "type": "string",
+                      "maxLength": 300
+                    }
+                  },
+                  "required": [
+                    "header",
+                    "label",
+                    "prefix",
+                    "help"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "setup",
+              "kind",
+              "url",
+              "auth",
+              "oauthClient",
+              "oauthScopes",
+              "fields"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]{1,64}$"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "setup": {
+                "default": [],
+                "maxItems": 20,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 500
+                }
+              },
+              "kind": {
+                "type": "string",
+                "const": "local"
+              },
+              "command": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              },
+              "args": {
+                "default": [],
+                "maxItems": 100,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 1024
+                }
+              },
+              "cwd": {
+                "default": null,
+                "type": "null"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "setup",
+              "kind",
+              "command",
+              "args",
+              "cwd"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "title",
+    "description",
+    "version",
+    "author",
+    "license",
+    "agent",
+    "skills",
+    "connections"
+  ],
+  "additionalProperties": false
+}

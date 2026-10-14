@@ -1,0 +1,23 @@
+{
+  "id": "xingular/summarize-source",
+  "title": "Summarize a source",
+  "description": "Summarize a provided source and explain its limitations.",
+  "publisher": "Xingular",
+  "license": "MIT",
+  "version": "1.0.0",
+  "category": "prompt",
+  "channel": "official",
+  "tags": [
+    "prompt"
+  ],
+  "requires": {
+    "harness": "0.1.6"
+  },
+  "sourceUrl": "https://github.com/tanntnny/xingular-hub/tree/main/entries/xingular/summarize-source/1.0.0",
+  "delivery": {
+    "kind": "registry",
+    "registryKind": "prompts",
+    "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/xingular/summarize-source/1.0.0/payload.json",
+    "sha256": "12a646d474fe3cd822970869c972d1d9400c7f6350388dc735dce5c31a22680a"
+  }
+}

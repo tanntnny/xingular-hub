@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "name": "hub-evidence-first",
+      "files": [
+        {
+          "path": "CONTENT.md",
+          "encoding": "utf8",
+          "content": "---\nname: Evidence first\ndescription: Distinguish observations, inferences, and unknowns.\n---\n\nSupport factual claims with inspectable evidence. Label inferences and uncertainties. Correct a claim when better evidence changes it.\n"
+        }
+      ]
+    }
+  ]
+}

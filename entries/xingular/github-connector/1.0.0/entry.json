@@ -1,0 +1,22 @@
+{
+  "id": "xingular/github-connector",
+  "title": "GitHub connector",
+  "description": "A setup recipe for the GitHub MCP server; provide your own credentials.",
+  "publisher": "Xingular",
+  "license": "MIT",
+  "version": "1.0.0",
+  "category": "connector",
+  "channel": "official",
+  "tags": [
+    "connector"
+  ],
+  "requires": {
+    "harness": "0.1.6"
+  },
+  "sourceUrl": "https://github.com/tanntnny/xingular-hub/tree/main/entries/xingular/github-connector/1.0.0",
+  "delivery": {
+    "kind": "document",
+    "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/xingular/github-connector/1.0.0/payload.json",
+    "sha256": "ec5bd9675e2977b9d880cf81732d84ac72b04af271048499415eaa6288896223"
+  }
+}

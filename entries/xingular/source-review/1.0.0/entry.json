@@ -1,0 +1,23 @@
+{
+  "id": "xingular/source-review",
+  "title": "Review a source",
+  "description": "Check who wrote a source, what it supports, and what remains uncertain.",
+  "publisher": "Xingular",
+  "license": "MIT",
+  "version": "1.0.0",
+  "category": "skill",
+  "channel": "official",
+  "tags": [
+    "skill"
+  ],
+  "requires": {
+    "harness": "0.1.6"
+  },
+  "sourceUrl": "https://github.com/tanntnny/xingular-hub/tree/main/entries/xingular/source-review/1.0.0",
+  "delivery": {
+    "kind": "registry",
+    "registryKind": "skills",
+    "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/xingular/source-review/1.0.0/payload.json",
+    "sha256": "bb0617889ee1ca39611a10952bec3086fa3986e9ce10a809c473c57acf47bc07"
+  }
+}

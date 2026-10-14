@@ -1,0 +1,25 @@
+name: Catalog validation
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run build
+      - run: npm run check
+      - run: npm test
+      - if: github.event_name == 'pull_request'
+        run: node scripts/immutable.mjs '${{ github.event.pull_request.base.sha }}'
+      - run: git diff --exit-code -- catalog.json CATALOG.md

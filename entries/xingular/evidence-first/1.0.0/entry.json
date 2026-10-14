@@ -1,0 +1,23 @@
+{
+  "id": "xingular/evidence-first",
+  "title": "Evidence first",
+  "description": "Keep observations, inferences, and unknowns distinct.",
+  "publisher": "Xingular",
+  "license": "MIT",
+  "version": "1.0.0",
+  "category": "rule",
+  "channel": "official",
+  "tags": [
+    "rule"
+  ],
+  "requires": {
+    "harness": "0.1.6"
+  },
+  "sourceUrl": "https://github.com/tanntnny/xingular-hub/tree/main/entries/xingular/evidence-first/1.0.0",
+  "delivery": {
+    "kind": "registry",
+    "registryKind": "rules",
+    "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/xingular/evidence-first/1.0.0/payload.json",
+    "sha256": "0f77661ea41e27bcb51aad982d15d493b893c5c1ba1eb6046a21315ddac07c5b"
+  }
+}
