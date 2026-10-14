@@ -2,6 +2,56 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "xingular/design-decision-management",
+      "title": "Design decision management",
+      "description": "Create and maintain feature specs, significant change proposals, versioned architecture or model designs, and decision records.",
+      "publisher": "Xingular",
+      "license": "MIT",
+      "version": "1.0.0",
+      "category": "skill",
+      "channel": "official",
+      "tags": [
+        "skill",
+        "documentation",
+        "architecture"
+      ],
+      "requires": {
+        "harness": "0.1.6"
+      },
+      "sourceUrl": "https://github.com/tanntnny/xingular-hub/tree/main/entries/xingular/design-decision-management/1.0.0",
+      "delivery": {
+        "kind": "registry",
+        "registryKind": "skills",
+        "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/xingular/design-decision-management/1.0.0/payload.json",
+        "sha256": "495bbf4f85203d50f319a99219b44bcb39ac7acc5724afa1d5dd41d7c9083bd2"
+      }
+    },
+    {
+      "id": "xingular/docs-governance",
+      "title": "Documentation governance",
+      "description": "Set up, migrate, index, audit, or synchronize Git-native documentation for software, ML research, and agent harnesses.",
+      "publisher": "Xingular",
+      "license": "MIT",
+      "version": "1.0.0",
+      "category": "skill",
+      "channel": "official",
+      "tags": [
+        "skill",
+        "documentation",
+        "governance"
+      ],
+      "requires": {
+        "harness": "0.1.6"
+      },
+      "sourceUrl": "https://github.com/tanntnny/xingular-hub/tree/main/entries/xingular/docs-governance/1.0.0",
+      "delivery": {
+        "kind": "registry",
+        "registryKind": "skills",
+        "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/xingular/docs-governance/1.0.0/payload.json",
+        "sha256": "8c81001f54bc70e5de288271a1c4f2e6772dfce9bb46daed6e0ecd384e7c2dfc"
+      }
+    },
+    {
       "id": "xingular/evidence-first",
       "title": "Evidence first",
       "description": "Keep observations, inferences, and unknowns distinct.",
@@ -22,6 +72,31 @@
         "registryKind": "rules",
         "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/xingular/evidence-first/1.0.0/payload.json",
         "sha256": "0f77661ea41e27bcb51aad982d15d493b893c5c1ba1eb6046a21315ddac07c5b"
+      }
+    },
+    {
+      "id": "xingular/experiment-evaluation",
+      "title": "Experiment evaluation",
+      "description": "Plan and document repeatable software, ML, research, and agent-harness experiments and cross-run or design comparisons.",
+      "publisher": "Xingular",
+      "license": "MIT",
+      "version": "1.0.0",
+      "category": "skill",
+      "channel": "official",
+      "tags": [
+        "skill",
+        "documentation",
+        "evaluation"
+      ],
+      "requires": {
+        "harness": "0.1.6"
+      },
+      "sourceUrl": "https://github.com/tanntnny/xingular-hub/tree/main/entries/xingular/experiment-evaluation/1.0.0",
+      "delivery": {
+        "kind": "registry",
+        "registryKind": "skills",
+        "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/xingular/experiment-evaluation/1.0.0/payload.json",
+        "sha256": "a437f8e98dbf8a59c50a60e2b20966d7b655766fcfdf1f665a7d56b7e52f82e8"
       }
     },
     {
