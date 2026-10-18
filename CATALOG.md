@@ -2,6 +2,7 @@
 
 | Item | Type | Publisher | Version | License |
 |---|---|---|---|---|
+| [Documentation toolkit](entries/tanntnny/documentation-skills/1.0.0) | skill | tanntnny | 1.0.0 | MIT |
 | [Design decision management](entries/xingular/design-decision-management/1.0.0) | skill | Xingular | 1.0.0 | MIT |
 | [Design decision management](entries/xingular/design-decision-management/1.0.1) | skill | tanntnny | 1.0.1 | MIT |
 | [Documentation governance](entries/xingular/docs-governance/1.0.0) | skill | Xingular | 1.0.0 | MIT |

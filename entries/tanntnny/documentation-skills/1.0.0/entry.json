@@ -1,0 +1,27 @@
+{
+  "id": "tanntnny/documentation-skills",
+  "title": "Documentation toolkit",
+  "description": "A toolkit for governing, writing, researching, and auditing project and technical study documentation.",
+  "publisher": "tanntnny",
+  "license": "MIT",
+  "version": "1.0.0",
+  "category": "skill",
+  "channel": "community",
+  "tags": [
+    "skill",
+    "documentation",
+    "writing",
+    "research",
+    "study"
+  ],
+  "requires": {
+    "harness": "0.1.6"
+  },
+  "sourceUrl": "https://github.com/tanntnny/xingular-hub/tree/main/entries/tanntnny/documentation-skills/1.0.0",
+  "delivery": {
+    "kind": "registry",
+    "registryKind": "skills",
+    "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/tanntnny/documentation-skills/1.0.0/payload.json",
+    "sha256": "b0616b87aa7085db59c396458e5d039a82f847ca4384ad46626ff893db1e1361"
+  }
+}
