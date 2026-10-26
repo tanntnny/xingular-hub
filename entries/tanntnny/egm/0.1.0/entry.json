@@ -1,0 +1,26 @@
+{
+  "id": "tanntnny/egm",
+  "title": "Elephant-Goldfish Model",
+  "description": "Spec-driven development: deep-context drafting and zero-context Goldfish reviews. 7 skills and 9 reviewer subagent profiles. Unofficial listing of Google's Apache-2.0 plugin, installed unchanged from a pinned upstream commit; not a Google product.",
+  "publisher": "tanntnny",
+  "license": "Apache-2.0",
+  "version": "0.1.0",
+  "category": "plugin",
+  "channel": "community",
+  "tags": [
+    "plugin",
+    "skill",
+    "subagents",
+    "review",
+    "design-docs",
+    "spec-driven"
+  ],
+  "requires": {
+    "harness": "1.1.0"
+  },
+  "sourceUrl": "https://github.com/google/elephant-goldfish-model/tree/3d0b34821ce88ad328b0c9bf0e06d7eb5f1cd669",
+  "delivery": {
+    "kind": "pi-package",
+    "source": "git:https://github.com/google/elephant-goldfish-model@3d0b34821ce88ad328b0c9bf0e06d7eb5f1cd669"
+  }
+}

@@ -16,7 +16,10 @@ const catalog = { schemaVersion: 1, entries: entries(join(root, 'entries')).sort
   return entry
 }) }
 writeFileSync(join(root, 'catalog.json'), JSON.stringify(catalog, null, 2) + '\n')
-const rows = catalog.entries.map((entry) => `| [${entry.title}](${new URL(entry.sourceUrl).pathname.replace(/^\/tanntnny\/xingular-hub\/tree\/main\//, '')}) | ${entry.category} | ${entry.publisher} | ${entry.version} | ${entry.license} |`)
+// An entry kept in this repository links to its folder; one kept upstream links to its source.
+const HUB_TREE = 'https://github.com/tanntnny/xingular-hub/tree/main/'
+const link = (url) => url.startsWith(HUB_TREE) ? url.slice(HUB_TREE.length) : url
+const rows = catalog.entries.map((entry) => `| [${entry.title}](${link(entry.sourceUrl)}) | ${entry.category} | ${entry.publisher} | ${entry.version} | ${entry.license} |`)
 writeFileSync(join(root, 'CATALOG.md'), '# Catalog\n\n| Item | Type | Publisher | Version | License |\n|---|---|---|---|---|\n' + rows.join('\n') + '\n')
 if (process.argv.includes('--sync-harness')) {
   const target = join(root, '..', 'Harness', 'src', 'hub', 'catalog.json')
