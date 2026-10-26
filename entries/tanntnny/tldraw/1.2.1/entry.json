@@ -1,0 +1,27 @@
+{
+  "id": "tanntnny/tldraw",
+  "title": "tldraw diagrams",
+  "description": "Turns a description into a hand-drawn tldraw whiteboard (.tldr) and exports PNG/SVG. Unchanged copy of Agents365-ai's MIT tldraw-skill v1.2.1. Export needs Node and `npm install -g @kitschpatrol/tldraw-cli`; without it the skill writes .tldr files for tldraw.com.",
+  "publisher": "tanntnny",
+  "license": "MIT",
+  "version": "1.2.1",
+  "category": "skill",
+  "channel": "community",
+  "tags": [
+    "skill",
+    "diagram",
+    "tldraw",
+    "whiteboard",
+    "visualization"
+  ],
+  "requires": {
+    "harness": "0.1.6"
+  },
+  "sourceUrl": "https://github.com/Agents365-ai/365-skills/tree/ee5e382f5a6df9045723b5c8e3e0b860c988a406/plugins/tldraw",
+  "delivery": {
+    "kind": "registry",
+    "registryKind": "skills",
+    "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/tanntnny/tldraw/1.2.1/payload.json",
+    "sha256": "02099f8222ad55c0d8d0122e0ff333d5744cd0448b20e156ea021e3865aa23ff"
+  }
+}
