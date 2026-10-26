@@ -1,0 +1,26 @@
+{
+  "id": "tanntnny/documentation-skills",
+  "title": "Documentation toolkit",
+  "description": "A single skill for setting up, migrating, indexing, auditing, and synchronizing Git-native documentation for software, ML research, and agent harnesses.",
+  "publisher": "tanntnny",
+  "license": "MIT",
+  "version": "2.0.0",
+  "category": "skill",
+  "channel": "community",
+  "tags": [
+    "skill",
+    "documentation",
+    "governance",
+    "git-native"
+  ],
+  "requires": {
+    "harness": "0.1.6"
+  },
+  "sourceUrl": "https://github.com/tanntnny/xingular-hub/tree/main/entries/tanntnny/documentation-skills/2.0.0",
+  "delivery": {
+    "kind": "registry",
+    "registryKind": "skills",
+    "url": "https://raw.githubusercontent.com/tanntnny/xingular-hub/main/entries/tanntnny/documentation-skills/2.0.0/payload.json",
+    "sha256": "3bba5fc73422847ebba4a4b11af1b844c1c308e1a973139de6f8d99dda246627"
+  }
+}
