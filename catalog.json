@@ -133,6 +133,31 @@
       }
     },
     {
+      "id": "tanntnny/xingular-devkit",
+      "title": "Xingular Devkit",
+      "description": "Developer run forensics: diagnose incomplete Harness runs, distinguish guardrails and lifecycle limits from provider or model behaviour, and draft evidence-backed proposals. Version 0.2.0 adds owner-prefixed commands (/xdiag:, /xdiag:sweep, /xdiag:propose) and diagnoses the current conversation's latest prior run by default.",
+      "publisher": "tanntnny",
+      "license": "MIT",
+      "version": "0.2.0",
+      "category": "plugin",
+      "channel": "community",
+      "tags": [
+        "plugin",
+        "skill",
+        "diagnostics",
+        "run-forensics",
+        "developer-tools"
+      ],
+      "requires": {
+        "harness": "1.3.1"
+      },
+      "sourceUrl": "https://github.com/tanntnny/xingular-devkit/tree/84a250120324e801556cef1437fe0b8bfe40781a",
+      "delivery": {
+        "kind": "pi-package",
+        "source": "git:https://github.com/tanntnny/xingular-devkit@84a250120324e801556cef1437fe0b8bfe40781a"
+      }
+    },
+    {
       "id": "xingular/design-decision-management",
       "title": "Design decision management",
       "description": "Create and maintain feature specs, significant change proposals, versioned architecture or model designs, and decision records.",
